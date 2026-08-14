@@ -1,13 +1,14 @@
 # 野猪睡眠 AnimalSleep — 法律文件托管（GitHub Pages）
 
 本仓库用于托管 App Store 审核所需的《用户协议》与《隐私政策》。
-页面为静态 HTML，中英双语（页面右上角可切换）。
+页面为静态 HTML，支持中文、English、日本語、한국어 四种语言（页面右上角可切换）。
 
 ## 文件
 
 - `index.html` — 入口页
 - `user-agreement.html` — 用户协议
 - `privacy-policy.html` — 隐私政策
+- `support.html` — 帮助与支持（FAQ）
 
 ## 部署步骤
 

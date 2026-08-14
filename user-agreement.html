@@ -29,13 +29,17 @@
   }
   .tabs label + label { margin-left: 10px; }
   .lang-radio { position: absolute; opacity: 0; pointer-events: none; }
-  .lang-en { display: none; }
+  main .panel { display: none; }
+  #lang-zh:checked ~ .wrap main .lang-zh,
+  #lang-en:checked ~ .wrap main .lang-en,
+  #lang-ja:checked ~ .wrap main .lang-ja,
+  #lang-ko:checked ~ .wrap main .lang-ko { display: block; }
   #lang-zh:checked ~ .wrap main .tabs label[for="lang-zh"],
-  #lang-en:checked ~ .wrap main .tabs label[for="lang-en"] {
+  #lang-en:checked ~ .wrap main .tabs label[for="lang-en"],
+  #lang-ja:checked ~ .wrap main .tabs label[for="lang-ja"],
+  #lang-ko:checked ~ .wrap main .tabs label[for="lang-ko"] {
     background: var(--accent); color: #fff; border-color: var(--accent);
   }
-  #lang-en:checked ~ .wrap main .lang-zh { display: none; }
-  #lang-en:checked ~ .wrap main .lang-en { display: block; }
   main .panel { background: var(--card); border: 1px solid var(--line);
     border-radius: 14px; padding: 28px 30px; margin-top: 14px; }
   section { margin-bottom: 26px; }
@@ -53,11 +57,14 @@
   @media (max-width: 480px) {
     main .panel { padding: 20px 18px; }
   }
+
 </style>
 </head>
 <body>
 <input type="radio" name="lang" id="lang-zh" class="lang-radio" checked>
 <input type="radio" name="lang" id="lang-en" class="lang-radio">
+<input type="radio" name="lang" id="lang-ja" class="lang-radio">
+<input type="radio" name="lang" id="lang-ko" class="lang-radio">
 <div class="wrap">
   <header>
     <div class="app">ANIMALSLEEP · 野猪睡眠</div>
@@ -67,16 +74,20 @@
   <main>
     <div class="tabs">
       <label for="lang-zh">中文</label>
-      <label for="lang-en">English</label>
+<label for="lang-en">English</label>
+<label for="lang-ja">日本語</label>
+<label for="lang-ko">한국어</label>
     </div>
     <div class="panel lang-zh">
 <section><h2>一、协议接受</h2><p>欢迎使用野猪睡眠（以下简称&quot;本App&quot;）。本App由野猪睡眠团队（以下简称&quot;我们&quot;）开发运营。请您在使用本App前仔细阅读本用户协议（以下简称&quot;本协议&quot;）。</p>
 <p>您下载、安装或使用本App，即视为您已阅读并同意接受本协议的约束。如果您不同意本协议的任何内容，请立即停止使用本App。</p></section>
-<section><h2>二、服务说明</h2><p><strong>【服务内容】</strong>野猪睡眠是一款帮助用户以月为单位统计睡眠质量的iOS应用程序，核心功能包括：</p><ul><li>通过Apple Watch或iPhone自动监测睡眠时段</li><li>基于睡眠时长生成动物评级（狮子、狗狗、野猪、猫头鹰）</li><li>提供端侧AI睡眠评价与建议</li><li>展示月度睡眠统计与日历记录</li></ul>
+<section><h2>二、服务说明</h2><p><strong>【服务内容】</strong>野猪睡眠是一款帮助用户以月为单位统计睡眠质量的iOS应用程序，核心功能包括：</p>
+<ul><li>通过Apple Watch或iPhone自动监测睡眠时段</li><li>基于睡眠时长生成动物评级（狮子、狗狗、野猪、猫头鹰）</li><li>提供端侧AI睡眠评价与建议</li><li>展示月度睡眠统计与日历记录</li></ul>
 <p><strong>【服务变更】</strong>我们保留随时修改、中断或终止本App全部或部分服务的权利，无需事先通知。我们不对因服务变更给您造成的任何损失承担责任。</p></section>
 <section><h2>三、无需注册登录</h2><p><strong>【无需登录】</strong>本App无需注册或登录即可使用全部功能，您无需提供任何个人信息即可开始记录睡眠数据。</p>
 <p><strong>【数据归属】</strong>本App不创建任何账号，您的睡眠数据仅存储在您的设备上。</p></section>
-<section><h2>四、用户行为规范</h2><p><strong>【禁止行为】</strong>您在使用本App时，不得从事以下行为：</p><ul><li>以任何方式干扰或破坏本App的正常运行</li><li>未经授权访问、修改或删除本App的源代码或数据</li><li>将本App用于任何违法或侵权目的</li><li>反向工程、反编译或试图提取本App的核心算法</li></ul>
+<section><h2>四、用户行为规范</h2><p><strong>【禁止行为】</strong>您在使用本App时，不得从事以下行为：</p>
+<ul><li>以任何方式干扰或破坏本App的正常运行</li><li>未经授权访问、修改或删除本App的源代码或数据</li><li>将本App用于任何违法或侵权目的</li><li>反向工程、反编译或试图提取本App的核心算法</li></ul>
 <p><strong>【设备使用】</strong>本App的睡眠监测功能依赖于您的设备传感器（如Apple Watch、iPhone加速度计）。监测结果的准确性受设备放置位置、使用习惯等因素影响，本App提供的睡眠数据仅供参考，不构成医疗建议或诊断。</p></section>
 <section><h2>五、知识产权</h2><p><strong>【权利归属】</strong>本App的所有内容，包括但不限于代码、界面设计、图标、文字、算法及AI评价模板，均受著作权法、商标法及其他知识产权法律法规保护。未经我们书面许可，您不得复制、修改、传播或用于商业目的。</p>
 <p><strong>【用户内容】</strong>您在本App中输入的评论、备注等内容，其知识产权归您所有。您授予我们在本App范围内使用、存储和展示该内容的权利。</p></section>
@@ -86,17 +97,20 @@
 <section><h2>七、隐私保护</h2><p>我们高度重视您的隐私。关于我们如何收集、使用和保护您的个人信息，请参阅《野猪睡眠隐私政策》。</p></section>
 <section><h2>八、协议修改</h2><p>我们保留随时修改本协议的权利。修改后的协议将在本App内公布，自公布之日起生效。您继续使用本App，视为接受修改后的协议。</p></section>
 <section><h2>九、适用法律与争议解决</h2><p>本协议的订立、执行和解释均适用中华人民共和国法律（不含港澳台地区）。因本协议引起的或与本协议有关的任何争议，双方应友好协商解决；协商不成的，任何一方均可向被告所在地有管辖权的人民法院提起诉讼。</p></section>
-<section><h2>十、联系我们</h2><p>如您对本协议有任何疑问，请通过以下方式联系我们：</p><ul><li>电子邮件：13039475@qq.com</li><li>反馈入口：本App设置页 → 意见反馈</li></ul>
+<section><h2>十、联系我们</h2><p>如您对本协议有任何疑问，请通过以下方式联系我们：</p>
+<ul><li>电子邮件：13039475@qq.com</li></ul>
 <p>野猪睡眠团队</p></section>
     </div>
     <div class="panel lang-en">
 <section><h2>1. Acceptance of Terms</h2><p>Welcome to AnimalSleep (the &quot;App&quot;), developed and operated by the AnimalSleep team (&quot;we&quot;). Please read this User Agreement (the &quot;Agreement&quot;) carefully before using the App.</p>
 <p>By downloading, installing or using the App, you acknowledge that you have read and agreed to be bound by this Agreement. If you do not agree with any part of it, please stop using the App immediately.</p></section>
-<section><h2>2. Service Description</h2><p>[Services] AnimalSleep is an iOS app that helps users track sleep quality on a monthly basis. Core features include:</p><ul><li>Automatic sleep monitoring via Apple Watch or iPhone</li><li>Animal ratings based on sleep duration (Lion, Dog, Boar, Owl)</li><li>On-device AI sleep evaluation and suggestions</li><li>Monthly sleep statistics and calendar records</li></ul>
+<section><h2>2. Service Description</h2><p>[Services] AnimalSleep is an iOS app that helps users track sleep quality on a monthly basis. Core features include:</p>
+<ul><li>Automatic sleep monitoring via Apple Watch or iPhone</li><li>Animal ratings based on sleep duration (Lion, Dog, Boar, Owl)</li><li>On-device AI sleep evaluation and suggestions</li><li>Monthly sleep statistics and calendar records</li></ul>
 <p>[Changes] We reserve the right to modify, suspend or terminate all or part of the services at any time without prior notice. We are not liable for any loss caused by such changes.</p></section>
 <section><h2>3. No Account Required</h2><p>[No Sign-in Required] The App does not require registration or sign-in. You can use all features without providing any personal information.</p>
 <p>[Data Ownership] The App does not create any account. Your sleep data is stored only on your device.</p></section>
-<section><h2>4. User Conduct</h2><p>[Prohibited Conduct] While using the App, you must not:</p><ul><li>Interfere with or disrupt the normal operation of the App in any way</li><li>Access, modify or delete the App&#x27;s source code or data without authorization</li><li>Use the App for any illegal or infringing purpose</li><li>Reverse engineer, decompile, or attempt to extract the App&#x27;s core algorithms</li></ul>
+<section><h2>4. User Conduct</h2><p>[Prohibited Conduct] While using the App, you must not:</p>
+<ul><li>Interfere with or disrupt the normal operation of the App in any way</li><li>Access, modify or delete the App&#x27;s source code or data without authorization</li><li>Use the App for any illegal or infringing purpose</li><li>Reverse engineer, decompile, or attempt to extract the App&#x27;s core algorithms</li></ul>
 <p>[Device Usage] The App&#x27;s sleep monitoring relies on your device sensors (e.g., Apple Watch, iPhone accelerometer). Accuracy is affected by device placement and usage habits. Sleep data provided by the App is for reference only and does not constitute medical advice or diagnosis.</p></section>
 <section><h2>5. Intellectual Property</h2><p>[Ownership] All content in the App, including but not limited to code, UI design, icons, text, algorithms and AI evaluation templates, is protected by copyright, trademark and other intellectual property laws. You may not copy, modify, distribute or use them for commercial purposes without our written permission.</p>
 <p>[User Content] Comments and notes you enter in the App belong to you. You grant us the right to use, store and display such content within the App.</p></section>
@@ -106,8 +120,55 @@
 <section><h2>7. Privacy Protection</h2><p>We take your privacy seriously. Please refer to the AnimalSleep Privacy Policy for details on how we collect, use and protect your personal information.</p></section>
 <section><h2>8. Agreement Changes</h2><p>We reserve the right to modify this Agreement at any time. Revised terms will be published in the App and take effect upon publication. Your continued use of the App constitutes acceptance of the revised terms.</p></section>
 <section><h2>9. Governing Law &amp; Disputes</h2><p>This Agreement is governed by the laws of the People&#x27;s Republic of China (excluding Hong Kong, Macao and Taiwan). Any dispute arising from or related to this Agreement shall be resolved through friendly negotiation; if negotiation fails, either party may bring a lawsuit to the competent people&#x27;s court at the defendant&#x27;s domicile.</p></section>
-<section><h2>10. Contact Us</h2><p>If you have any questions about this Agreement, please contact us via:</p><ul><li>Email: 13039475@qq.com</li><li>Feedback: App Settings → Feedback</li></ul>
+<section><h2>10. Contact Us</h2><p>If you have any questions about this Agreement, please contact us via:</p>
+<ul><li>Email: 13039475@qq.com</li></ul>
 <p>AnimalSleep Team</p></section>
+    </div>
+    <div class="panel lang-ja">
+<section><h2>1. 規約の承諾</h2><p>野猪睡眠（以下「本アプリ」）へようこそ。本アプリは野猪睡眠チーム（以下「当社」）が開発・運営しています。ご利用前に本利用規約（以下「本規約」）をよくお読みください。</p>
+<p>本アプリをダウンロード、インストール、または利用した時点で、本規約を読んで同意したものとみなされます。本規約のいずれかの内容に同意できない場合は、直ちに利用を中止してください。</p></section>
+<section><h2>2. サービス内容</h2><p><strong>【サービス内容】</strong>野猪睡眠は、月単位で睡眠の質を記録するiOSアプリです。主な機能：</p>
+<ul><li>Apple WatchまたはiPhoneで睡眠時間を自動モニタリング</li><li>睡眠時間に基づく動物評価（ライオン・イヌ・イノシシ・フクロウ）</li><li>端末内AIによる睡眠評価とアドバイス</li><li>月間統計とカレンダー記録</li></ul>
+<p><strong>【変更】</strong>当社は事前通知なくサービスの全部または一部を変更・中断・終了する権利を留保します。変更により生じた損害について当社は責任を負いません。</p></section>
+<section><h2>3. 登録・ログイン不要</h2><p><strong>【ログイン不要】</strong>本アプリは登録・ログインなしで全機能を利用できます。個人情報を提供することなく睡眠記録を始められます。</p>
+<p><strong>【データの帰属】</strong>本アプリはアカウントを作成しません。睡眠データは端末内にのみ保存されます。</p></section>
+<section><h2>4. 利用者規範</h2><p><strong>【禁止行為】</strong>本アプリの利用にあたり、以下を行ってはなりません：</p>
+<ul><li>本アプリの正常な動作を妨害・破壊する行為</li><li>無断で本アプリのソースコードやデータにアクセス・改変・削除する行為</li><li>違法または権利侵害を目的とした利用</li><li>リバースエンジニアリング、逆コンパイル、コアアルゴリズムの抽出</li></ul>
+<p><strong>【端末利用】</strong>睡眠モニタリングは端末のセンサー（Apple Watch、iPhone加速度計など）に依存します。結果の精度は端末の設置位置や利用習慣に影響されます。本アプリの睡眠データは参考情報であり、医療アドバイスや診断を構成するものではありません。</p></section>
+<section><h2>5. 知的財産権</h2><p><strong>【権利帰属】</strong>本アプリのすべてのコンテンツ（コード、UIデザイン、アイコン、文章、アルゴリズム、AI評価テンプレートを含む）は、著作権法・商標法その他の知的財産権法で保護されています。当社の書面による許可なく、複製・改変・頒布・商業利用することはできません。</p>
+<p><strong>【ユーザーコンテンツ】</strong>本アプリに入力したコメントやメモの知的財産権はあなたに帰属します。当社は本アプリ内でこれらを利用・保存・表示する権利を付与されます。</p></section>
+<section><h2>6. 免責事項</h2><p><strong>【健康免責】</strong>本アプリは医療機器ではなく、診断・治療アドバイス・専門的な健康相談を提供しません。生成される睡眠評価・AI評価・統計は個人の参考用であり、医師や専門医療機関の助言に代わるものではありません。深刻な睡眠障害や健康問題がある場合は、専門医にご相談ください。</p>
+<p><strong>【データ精度】</strong>睡眠データは端末センサーから推定されるため誤差が生じる可能性があります。当社は絶対的な正確性を保証しません。本アプリのデータに基づく判断は自己責任で行ってください。</p>
+<p><strong>【サービス中断】</strong>ネットワーク障害、端末の問題、メンテナンス、不可抗力による中断について、当社は責任を負いません。</p></section>
+<section><h2>7. プライバシー保護</h2><p>当社はプライバシーを重視しています。個人情報の収集・利用・保護の方法については「野猪睡眠プライバシーポリシー」をご参照ください。</p></section>
+<section><h2>8. 規約の変更</h2><p>当社はいつでも本規約を変更する権利を留保します。変更後の規約は本アプリ内で公表され、公表日から効力を生じます。変更後も本アプリを利用し続けることで、変更後の規約に同意したものとみなされます。</p></section>
+<section><h2>9. 準拠法と紛争解決</h2><p>本規約の成立・履行・解釈は中華人民共和国の法律（香港・マカオ・台湾を除く）に準拠します。本規約に関連する紛争は誠意をもって協議解決し、協議が成立しない場合は、被告所在地の管轄人民法院に提訴できます。</p></section>
+<section><h2>10. お問い合わせ</h2><p>本規約に関するご質問は、以下の方法でお問い合わせください：</p>
+<ul><li>メール：13039475@qq.com</li></ul>
+<p>野猪睡眠チーム</p></section>
+    </div>
+    <div class="panel lang-ko">
+<section><h2>1. 약관 동의</h2><p>野猪睡眠(이하 &#x27;본 앱&#x27;)에 오신 것을 환영합니다. 본 앱은 野猪睡眠 팀(이하 &#x27;당사&#x27;)이 개발·운영합니다. 이용 전에 본 이용약관(이하 &#x27;본 약관&#x27;)을 주의 깊게 읽어 주세요.</p>
+<p>본 앱을 다운로드, 설치 또는 이용하는 경우 본 약관을 읽고 동의한 것으로 간주됩니다. 본 약관의 일부에 동의하지 않으면 즉시 이용을 중단해 주세요.</p></section>
+<section><h2>2. 서비스 안내</h2><p><strong>【서비스 내용】</strong>野猪睡眠은 월 단위로 수면의 질을 기록하는 iOS 앱입니다. 핵심 기능:</p>
+<ul><li>Apple Watch 또는 iPhone으로 수면 시간 자동 모니터링</li><li>수면 시간 기반 동물 등급(사자·강아지·멧돼지·올빼미)</li><li>기기 내 AI 수면 평가 및 조언</li><li>월간 수면 통계 및 캘린더 기록</li></ul>
+<p><strong>【서비스 변경】</strong>당사는 사전 통지 없이 서비스의 전부 또는 일부를 변경·중단·종료할 권리를 보유합니다. 서비스 변경으로 발생한 손해에 대해 당사는 책임을 지지 않습니다.</p></section>
+<section><h2>3. 회원가입·로그인 불필요</h2><p><strong>【로그인 불필요】</strong>본 앱은 회원가입이나 로그인 없이 모든 기능을 이용할 수 있습니다. 개인정보를 제공하지 않아도 수면 기록을 시작할 수 있습니다.</p>
+<p><strong>【데이터 소유】</strong>본 앱은 계정을 만들지 않습니다. 수면 데이터는 기기에만 저장됩니다.</p></section>
+<section><h2>4. 이용자 행동 규범</h2><p><strong>【금지 행위】</strong>본 앱 이용 시 다음 행위를 해서는 안 됩니다:</p>
+<ul><li>본 앱의 정상적인 작동을 방해하거나 손상시키는 행위</li><li>무단으로 본 앱의 소스코드나 데이터에 접근·수정·삭제하는 행위</li><li>불법 또는 권리 침해 목적의 이용</li><li>리버스 엔지니어링, 디컴파일, 핵심 알고리즘 추출 시도</li></ul>
+<p><strong>【기기 사용】</strong>수면 모니터링은 기기 센서(Apple Watch, iPhone 가속도계 등)에 의존합니다. 결과의 정확성은 기기 위치와 사용 습관에 따라 달라질 수 있습니다. 본 앱의 수면 데이터는 참고용이며 의학적 조언이나 진단이 아닙니다.</p></section>
+<section><h2>5. 지식재산권</h2><p><strong>【권리 귀속】</strong>본 앱의 모든 콘텐츠(코드, UI 디자인, 아이콘, 문구, 알고리즘, AI 평가 템플릿 포함)는 저작권법·상표법 및 기타 지식재산권 법률로 보호됩니다. 당사의 서면 허가 없이 복제·수정·배포·상업적 이용할 수 없습니다.</p>
+<p><strong>【사용자 콘텐츠】</strong>본 앱에 입력한 댓글·메모의 지식재산권은 사용자에게 있습니다. 당사는 본 앱 내에서 이를 이용·저장·표시할 권리를 부여받습니다.</p></section>
+<section><h2>6. 면책 조항</h2><p><strong>【건강 면책】</strong>본 앱은 의료기기가 아니며 진단·치료 조언·전문 건강 상담을 제공하지 않습니다. 생성되는 수면 등급·AI 평가·통계는 개인 참고용이며 의사나 전문 의료기관의 조언을 대체할 수 없습니다. 심각한 수면 장애나 건강 문제가 있다면 전문 의료진과 상담하세요.</p>
+<p><strong>【데이터 정확성】</strong>수면 데이터는 기기 센서로 추정되므로 오차가 있을 수 있습니다. 당사는 절대적인 정확성을 보장하지 않습니다. 본 앱 데이터에 기반한 판단은 사용자 본인의 책임입니다.</p>
+<p><strong>【서비스 중단】</strong>네트워크 장애, 기기 문제, 유지보수, 불가항력으로 인한 중단에 대해 당사는 책임을 지지 않습니다.</p></section>
+<section><h2>7. 개인정보 보호</h2><p>당사는 개인정보 보호를 중요하게 생각합니다. 개인정보의 수집·이용·보호 방법은 &#x27;野猪睡眠 개인정보 처리방침&#x27;을 참조해 주세요.</p></section>
+<section><h2>8. 약관 변경</h2><p>당사는 언제든 본 약관을 변경할 권리를 보유합니다. 변경된 약관은 본 앱 내에 공지되며 공지일부터 효력이 발생합니다. 변경 후에도 본 앱을 계속 이용하면 변경된 약관에 동의한 것으로 간주됩니다.</p></section>
+<section><h2>9. 준거법 및 분쟁 해결</h2><p>본 약관의 체결·이행·해석은 중화인민공화국 법률(홍콩·마카오·대만 제외)을 따릅니다. 본 약관과 관련된 분쟁은 우호적인 협의로 해결하며, 협의가 이루어지지 않으면 피고 소재지의 관할 인민법원에 제소할 수 있습니다.</p></section>
+<section><h2>10. 문의처</h2><p>본 약관에 대한 문의는 다음 방법으로 연락해 주세요:</p>
+<ul><li>이메일: 13039475@qq.com</li></ul>
+<p>野猪睡眠 팀</p></section>
     </div>
     <div class="links">
       <a href="index.html">首页 Home</a>

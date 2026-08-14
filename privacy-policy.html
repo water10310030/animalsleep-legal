@@ -29,13 +29,17 @@
   }
   .tabs label + label { margin-left: 10px; }
   .lang-radio { position: absolute; opacity: 0; pointer-events: none; }
-  .lang-en { display: none; }
+  main .panel { display: none; }
+  #lang-zh:checked ~ .wrap main .lang-zh,
+  #lang-en:checked ~ .wrap main .lang-en,
+  #lang-ja:checked ~ .wrap main .lang-ja,
+  #lang-ko:checked ~ .wrap main .lang-ko { display: block; }
   #lang-zh:checked ~ .wrap main .tabs label[for="lang-zh"],
-  #lang-en:checked ~ .wrap main .tabs label[for="lang-en"] {
+  #lang-en:checked ~ .wrap main .tabs label[for="lang-en"],
+  #lang-ja:checked ~ .wrap main .tabs label[for="lang-ja"],
+  #lang-ko:checked ~ .wrap main .tabs label[for="lang-ko"] {
     background: var(--accent); color: #fff; border-color: var(--accent);
   }
-  #lang-en:checked ~ .wrap main .lang-zh { display: none; }
-  #lang-en:checked ~ .wrap main .lang-en { display: block; }
   main .panel { background: var(--card); border: 1px solid var(--line);
     border-radius: 14px; padding: 28px 30px; margin-top: 14px; }
   section { margin-bottom: 26px; }
@@ -53,11 +57,14 @@
   @media (max-width: 480px) {
     main .panel { padding: 20px 18px; }
   }
+
 </style>
 </head>
 <body>
 <input type="radio" name="lang" id="lang-zh" class="lang-radio" checked>
 <input type="radio" name="lang" id="lang-en" class="lang-radio">
+<input type="radio" name="lang" id="lang-ja" class="lang-radio">
+<input type="radio" name="lang" id="lang-ko" class="lang-radio">
 <div class="wrap">
   <header>
     <div class="app">ANIMALSLEEP · 野猪睡眠</div>
@@ -67,57 +74,157 @@
   <main>
     <div class="tabs">
       <label for="lang-zh">中文</label>
-      <label for="lang-en">English</label>
+<label for="lang-en">English</label>
+<label for="lang-ja">日本語</label>
+<label for="lang-ko">한국어</label>
     </div>
     <div class="panel lang-zh">
 <section><h2>一、引言</h2><p>野猪睡眠（以下简称&quot;本App&quot;）高度重视用户的隐私保护。本隐私政策旨在向您说明我们如何收集、使用、存储和保护您的个人信息。</p>
 <p>请您在使用本App前仔细阅读本政策。如您不同意本政策的任何内容，请停止使用本App。</p></section>
-<section><h2>二、我们收集的信息</h2><p><strong>【您提供的信息】</strong></p><ul><li>昵称：您可自愿设置个人昵称，用于在App内展示。</li></ul>
-<p><strong>【我们自动收集的信息】</strong></p><ul><li>睡眠数据：包括入睡时间、起床时间、睡眠时长，通过Apple Watch（HealthKit）或iPhone传感器自动采集。</li><li>设备信息：设备型号、iOS版本号，用于兼容性优化和故障排查。</li><li>App使用数据：页面访问、功能使用频率（匿名统计，不含个人身份信息）。</li></ul>
-<p><strong>【我们不收集的信息】</strong>我们不会收集以下信息：</p><ul><li>您的真实姓名、身份证号、电话号码、家庭住址</li><li>您的精确地理位置</li><li>您的通讯录、照片、短信内容</li><li>您的Apple ID密码或支付信息</li><li>通过麦克风录制的内容（本App不启用麦克风权限）</li></ul></section>
-<section><h2>三、信息的使用</h2><p>我们使用您的信息仅用于以下目的：</p><ul><li>睡眠数据：生成睡眠评级、AI评价、月度统计</li><li>昵称：个人中心展示</li><li>设备信息：兼容性适配、Bug修复</li></ul>
+<section><h2>二、我们收集的信息</h2><p><strong>【您提供的信息】</strong></p>
+<ul><li>昵称：您可自愿设置个人昵称，用于在App内展示。</li></ul>
+<p><strong>【我们自动收集的信息】</strong></p>
+<ul><li>睡眠数据：包括入睡时间、起床时间、睡眠时长，通过Apple Watch（HealthKit）或iPhone传感器自动采集。</li></ul>
+<p><strong>【我们不收集的信息】</strong>我们不会收集以下信息：</p>
+<ul><li>您的真实姓名、身份证号、电话号码、家庭住址</li><li>您的精确地理位置</li><li>您的通讯录、照片、短信内容</li><li>您的Apple ID密码或支付信息</li><li>通过麦克风录制的内容（本App不启用麦克风权限）</li><li>设备型号、iOS版本号或使用统计（本App不采集）</li></ul></section>
+<section><h2>三、信息的使用</h2><p>我们使用您的信息仅用于以下目的：</p>
+<ul><li>睡眠数据：生成睡眠评级、AI评价、月度统计</li><li>昵称：个人中心展示</li></ul>
 <p>我们不会将您的个人信息用于任何广告推送或商业营销目的。</p></section>
-<section><h2>四、信息的存储与保护</h2><p><strong>【存储方式】</strong></p><ul><li>本地存储：所有睡眠数据、评级记录均存储在您的iPhone本地设备中。</li><li>iCloud同步：如您开启iCloud，数据将通过Apple iCloud进行加密同步，以便您在多台设备间访问。</li></ul>
-<p><strong>【数据安全】</strong></p><ul><li>我们不运营后端服务器，您的数据不会上传至我们的服务器。</li><li>iCloud同步由Apple提供，遵循Apple的隐私和安全标准。</li><li>我们采用行业标准的安全措施保护数据，但无法保证绝对安全。</li></ul>
-<p><strong>【数据保留】</strong>您的数据将保留在您的设备上，直至您：</p><ul><li>手动删除App（本地数据将被清除）</li><li>通过iOS设置关闭iCloud同步</li></ul></section>
+<section><h2>四、信息的存储与保护</h2><p><strong>【存储方式】</strong></p>
+<ul><li>本地存储：所有睡眠数据、评级记录均存储在您的iPhone本地设备中。</li><li>iCloud同步：如您开启iCloud，App生成的睡眠摘要、评论与个人资料将通过Apple iCloud进行加密同步，以便您在多台设备间访问（不包含健康App中的原始健康数据）。</li></ul>
+<p><strong>【数据安全】</strong></p>
+<ul><li>我们不运营后端服务器，您的数据不会上传至我们的服务器。</li><li>iCloud同步由Apple提供，遵循Apple的隐私和安全标准。</li><li>我们采用行业标准的安全措施保护数据，但无法保证绝对安全。</li></ul>
+<p><strong>【数据保留】</strong>您的数据将保留在您的设备上，直至您：</p>
+<ul><li>手动删除App（本地数据将被清除）</li><li>通过iOS设置关闭iCloud同步</li></ul></section>
 <section><h2>五、信息的共享</h2><p>我们不会向任何第三方出售、出租或共享您的个人信息。</p>
-<p>仅在以下情形下，我们可能披露您的信息：</p><ul><li>法律法规要求或政府机关的合法要求</li><li>保护我们的合法权益或用户安全所必需</li><li>Apple作为技术服务商提供iCloud同步服务（数据由Apple处理）</li></ul></section>
-<section><h2>六、HealthKit 数据说明</h2><p><strong>【数据读取】</strong>如您使用Apple Watch，本App将通过Apple HealthKit读取您的睡眠分析数据（Sleep Analysis）。</p>
-<p><strong>【数据使用限制】</strong></p><ul><li>本App仅读取HealthKit中的睡眠数据，不会写入或修改您的健康数据。</li><li>我们不会将HealthKit数据用于广告或数据销售。</li><li>HealthKit数据不会离开您的设备或iCloud环境。</li></ul>
+<p>仅在以下情形下，我们可能披露您的信息：</p>
+<ul><li>法律法规要求或政府机关的合法要求</li><li>保护我们的合法权益或用户安全所必需</li><li>Apple作为技术服务商提供iCloud同步服务（数据由Apple处理）</li></ul></section>
+<section><h2>六、HealthKit 数据说明</h2><p><strong>【数据读取】</strong>本App通过iPhone运动传感器推断睡眠时段；如您使用Apple Watch，也将通过Apple HealthKit读取睡眠分析数据（Sleep Analysis）作为参考。</p>
+<p><strong>【数据使用限制】</strong></p>
+<ul><li>本App仅读取HealthKit中的睡眠数据，不会写入或修改您的健康数据。</li><li>我们不会将HealthKit数据用于广告或数据销售。</li><li>HealthKit数据不会离开您的设备或iCloud环境。</li></ul>
 <p><strong>【权限管理】</strong>您可随时在iOS「设置 → 隐私与安全性 → 健康 → 野猪睡眠」中关闭HealthKit数据访问权限。</p></section>
 <section><h2>七、您的权利</h2><p><strong>【访问与更正】</strong>您可以在本App内随时查看您的睡眠记录、评级和评论内容。</p>
-<p><strong>【删除权】</strong>您有权要求我们删除您的数据。由于数据存储在本地，您可通过以下方式删除：</p><ul><li>删除本App（清除所有本地数据）</li><li>在设置中关闭iCloud同步</li></ul></section>
+<p><strong>【删除权】</strong>您有权要求我们删除您的数据。由于数据存储在本地，您可通过以下方式删除：</p>
+<ul><li>删除本App（清除所有本地数据）</li><li>在设置中关闭iCloud同步</li></ul></section>
 <section><h2>八、儿童隐私</h2><p>本App不面向13岁以下儿童。我们不会故意收集13岁以下儿童的个人信息。如您发现我们收集了此类信息，请立即联系我们删除。</p></section>
-<section><h2>九、第三方服务</h2><p>本App使用以下第三方服务：</p><ul><li>HealthKit（Apple Inc.）— 读取Apple Watch睡眠数据</li><li>iCloud（Apple Inc.）— 数据跨设备同步</li></ul>
+<section><h2>九、第三方服务</h2><p>本App使用以下第三方服务：</p>
+<ul><li>HealthKit（Apple Inc.）— 读取Apple Watch睡眠数据</li><li>iCloud（Apple Inc.）— 数据跨设备同步</li></ul>
 <p>上述服务的隐私保护由Apple负责，请参阅Apple的隐私政策。</p></section>
 <section><h2>十、隐私政策的变更</h2><p>我们保留随时修改本隐私政策的权利。修改后的政策将在本App内公布，自公布之日起生效。重大变更将通过App内通知告知您。</p></section>
-<section><h2>十一、联系我们</h2><p>如您对本隐私政策有任何疑问、建议或投诉，请通过以下方式联系我们：</p><ul><li>电子邮件：13039475@qq.com</li><li>反馈入口：本App设置页 → 意见反馈</li></ul>
+<section><h2>十一、联系我们</h2><p>如您对本隐私政策有任何疑问、建议或投诉，请通过以下方式联系我们：</p>
+<ul><li>电子邮件：13039475@qq.com</li></ul>
 <p>野猪睡眠团队</p></section>
     </div>
     <div class="panel lang-en">
 <section><h2>1. Introduction</h2><p>AnimalSleep (the &quot;App&quot;) takes user privacy seriously. This Privacy Policy explains how we collect, use, store and protect your personal information.</p>
 <p>Please read this policy carefully before using the App. If you do not agree with any part of it, please stop using the App.</p></section>
-<section><h2>2. Information We Collect</h2><p>[Information you provide]</p><ul><li>Nickname: You may voluntarily set a nickname shown within the App.</li></ul>
-<p>[Information we collect automatically]</p><ul><li>Sleep data: Including bedtime, wake-up time and sleep duration, collected automatically via Apple Watch (HealthKit) or iPhone sensors.</li><li>Device information: Device model and iOS version, used for compatibility and troubleshooting.</li><li>App usage data: Page visits and feature usage frequency (anonymous statistics, no personal identifiers).</li></ul>
-<p>[Information we do NOT collect] We do not collect:</p><ul><li>Your real name, ID number, phone number or home address</li><li>Your precise geolocation</li><li>Your contacts, photos or messages</li><li>Your Apple ID password or payment information</li><li>Content recorded via microphone (the App does not request microphone permission)</li></ul></section>
-<section><h2>3. Use of Information</h2><p>We use your information only for the following purposes:</p><ul><li>Sleep data: generating sleep ratings, AI evaluations and monthly statistics</li><li>Nickname: display in your profile</li><li>Device information: compatibility and bug fixes</li></ul>
+<section><h2>2. Information We Collect</h2><p>[Information you provide]</p>
+<ul><li>Nickname: You may voluntarily set a nickname shown within the App.</li></ul>
+<p>[Information we collect automatically]</p>
+<ul><li>Sleep data: Including bedtime, wake-up time and sleep duration, collected automatically via Apple Watch (HealthKit) or iPhone sensors.</li></ul>
+<p>[Information we do NOT collect] We do not collect:</p>
+<ul><li>Your real name, ID number, phone number or home address</li><li>Your precise geolocation</li><li>Your contacts, photos or messages</li><li>Your Apple ID password or payment information</li><li>Content recorded via microphone (the App does not request microphone permission)</li><li>Device model, iOS version or usage statistics (the App does not collect them)</li></ul></section>
+<section><h2>3. Use of Information</h2><p>We use your information only for the following purposes:</p>
+<ul><li>Sleep data: generating sleep ratings, AI evaluations and monthly statistics</li><li>Nickname: display in your profile</li></ul>
 <p>We do not use your personal information for advertising or commercial marketing.</p></section>
-<section><h2>4. Storage &amp; Protection</h2><p>[Storage]</p><ul><li>Local storage: All sleep data and ratings are stored locally on your iPhone.</li><li>iCloud sync: If you enable iCloud, data is encrypted and synced via Apple iCloud so you can access it across devices.</li></ul>
-<p>[Security]</p><ul><li>We do not operate backend servers; your data is never uploaded to our servers.</li><li>iCloud sync is provided by Apple and follows Apple&#x27;s privacy and security standards.</li><li>We adopt industry-standard security measures, but cannot guarantee absolute security.</li></ul>
-<p>[Retention] Your data remains on your device until you:</p><ul><li>Delete the App manually (local data is cleared)</li><li>Disable iCloud sync in iOS Settings</li></ul></section>
+<section><h2>4. Storage &amp; Protection</h2><p>[Storage]</p>
+<ul><li>Local storage: All sleep data and ratings are stored locally on your iPhone.</li><li>iCloud sync: If you enable iCloud, the app&#x27;s sleep summaries, comments and profile are encrypted and synced via Apple iCloud so you can access them across devices (raw health data in the Health app is not included).</li></ul>
+<p>[Security]</p>
+<ul><li>We do not operate backend servers; your data is never uploaded to our servers.</li><li>iCloud sync is provided by Apple and follows Apple&#x27;s privacy and security standards.</li><li>We adopt industry-standard security measures, but cannot guarantee absolute security.</li></ul>
+<p>[Retention] Your data remains on your device until you:</p>
+<ul><li>Delete the App manually (local data is cleared)</li><li>Disable iCloud sync in iOS Settings</li></ul></section>
 <section><h2>5. Information Sharing</h2><p>We do not sell, rent or share your personal information with any third party.</p>
-<p>We may only disclose your information when:</p><ul><li>Required by laws or legitimate requests from government authorities</li><li>Necessary to protect our legal rights or user safety</li><li>Apple provides iCloud sync as a technical service provider (data processed by Apple)</li></ul></section>
-<section><h2>6. HealthKit Data</h2><p>[Reading data] If you use an Apple Watch, the App reads your sleep analysis data through Apple HealthKit.</p>
-<p>[Usage limits]</p><ul><li>The App only reads sleep data from HealthKit and never writes or modifies your health data.</li><li>We do not use HealthKit data for advertising or data sales.</li><li>HealthKit data never leaves your device or iCloud environment.</li></ul>
+<p>We may only disclose your information when:</p>
+<ul><li>Required by laws or legitimate requests from government authorities</li><li>Necessary to protect our legal rights or user safety</li><li>Apple provides iCloud sync as a technical service provider (data processed by Apple)</li></ul></section>
+<section><h2>6. HealthKit Data</h2><p>[Reading data] The App infers sleep periods from your iPhone&#x27;s motion sensors; if you use an Apple Watch, it also reads sleep analysis data (Sleep Analysis) from Apple HealthKit as a reference.</p>
+<p>[Usage limits]</p>
+<ul><li>The App only reads sleep data from HealthKit and never writes or modifies your health data.</li><li>We do not use HealthKit data for advertising or data sales.</li><li>HealthKit data never leaves your device or iCloud environment.</li></ul>
 <p>[Permission management] You can disable HealthKit access at any time in iOS Settings → Privacy &amp; Security → Health → AnimalSleep.</p></section>
 <section><h2>7. Your Rights</h2><p>[Access &amp; correction] You can view your sleep records, ratings and comments in the App at any time.</p>
-<p>[Deletion] You have the right to request deletion of your data. Since data is stored locally, you can delete it by:</p><ul><li>Deleting the App (clears all local data)</li><li>Disabling iCloud sync in Settings</li></ul></section>
+<p>[Deletion] You have the right to request deletion of your data. Since data is stored locally, you can delete it by:</p>
+<ul><li>Deleting the App (clears all local data)</li><li>Disabling iCloud sync in Settings</li></ul></section>
 <section><h2>8. Children&#x27;s Privacy</h2><p>The App is not intended for children under 13. We do not knowingly collect personal information from children under 13. If you find that we have collected such information, please contact us immediately and we will delete it.</p></section>
-<section><h2>9. Third-Party Services</h2><p>The App uses the following third-party services:</p><ul><li>HealthKit (Apple Inc.) — reading Apple Watch sleep data</li><li>iCloud (Apple Inc.) — cross-device data sync</li></ul>
+<section><h2>9. Third-Party Services</h2><p>The App uses the following third-party services:</p>
+<ul><li>HealthKit (Apple Inc.) — reading Apple Watch sleep data</li><li>iCloud (Apple Inc.) — cross-device data sync</li></ul>
 <p>Privacy for these services is governed by Apple. Please refer to Apple&#x27;s privacy policy.</p></section>
 <section><h2>10. Changes to This Policy</h2><p>We reserve the right to modify this Privacy Policy at any time. Revised terms will be published in the App and take effect upon publication. Significant changes will be notified via in-app notifications.</p></section>
-<section><h2>11. Contact Us</h2><p>If you have any questions, suggestions or complaints about this Privacy Policy, please contact us via:</p><ul><li>Email: 13039475@qq.com</li><li>Feedback: App Settings → Feedback</li></ul>
+<section><h2>11. Contact Us</h2><p>If you have any questions, suggestions or complaints about this Privacy Policy, please contact us via:</p>
+<ul><li>Email: 13039475@qq.com</li></ul>
 <p>AnimalSleep Team</p></section>
+    </div>
+    <div class="panel lang-ja">
+<section><h2>1. はじめに</h2><p>野猪睡眠（以下「本アプリ」）はユーザーのプライバシー保護を重視しています。本プライバシーポリシーは、当社がどのように個人情報を収集・利用・保存・保護するかを説明するものです。</p>
+<p>ご利用前に本ポリシーをよくお読みください。同意できない場合は利用を中止してください。</p></section>
+<section><h2>2. 収集する情報</h2><p><strong>【ご提供いただく情報】</strong></p>
+<ul><li>ニックネーム：任意で設定でき、アプリ内で表示されます。</li></ul>
+<p><strong>【自動的に収集する情報】</strong></p>
+<ul><li>睡眠データ：就寝時間・起床時間・睡眠時間（Apple Watch/HealthKitまたはiPhoneセンサーで自動収集）</li></ul>
+<p><strong>【収集しない情報】</strong></p>
+<ul><li>氏名、身分証番号、電話番号、住所</li><li>正確な位置情報</li><li>連絡先、写真、メッセージ</li><li>Apple IDパスワードや支払い情報</li><li>マイクによる録音（本アプリはマイク権限を要求しません）</li><li>機種、iOSバージョン、利用統計（本アプリでは収集しません）</li></ul></section>
+<section><h2>3. 情報の利用</h2><p>当社は情報を以下の目的にのみ利用します：</p>
+<ul><li>睡眠データ：睡眠評価・AI評価・月間統計の生成</li><li>ニックネーム：プロフィール表示</li></ul>
+<p>広告配信や商業マーケティング目的で個人情報を利用することはありません。</p></section>
+<section><h2>4. 情報の保存と保護</h2><p><strong>【保存方法】</strong></p>
+<ul><li>ローカル保存：すべての睡眠データ・評価記録はiPhone端末内に保存されます。</li><li>iCloud同期：有効にすると、本アプリで生成した睡眠サマリー・コメント・プロフィールがApple iCloudを通じて暗号化同期され、複数端末でアクセスできます（ヘルスケアアプリの生の健康データは含まれません）。</li></ul>
+<p><strong>【データセキュリティ】</strong></p>
+<ul><li>当社はバックエンドサーバーを運営しておらず、データが当社のサーバーにアップロードされることはありません。</li><li>iCloud同期はAppleが提供し、Appleのプライバシー・セキュリティ基準に従います。</li><li>業界標準の安全対策を講じていますが、絶対的な安全性は保証できません。</li></ul>
+<p><strong>【データ保持】</strong>データは以下の時点まで端末に保持されます：</p>
+<ul><li>アプリを手動削除（ローカルデータ消去）</li><li>iOS設定でiCloud同期をオフ</li></ul></section>
+<section><h2>5. 情報の共有</h2><p>当社は第三者に個人情報を販売・貸与・共有することはありません。</p>
+<p>以下の場合にのみ情報を開示する可能性があります：</p>
+<ul><li>法令または政府機関の正当な要求</li><li>当社の正当な権利やユーザー安全の保護に必要な場合</li><li>Appleが技術サービスとしてiCloud同期を提供する場合（データはAppleが処理）</li></ul></section>
+<section><h2>6. HealthKitデータについて</h2><p><strong>【データ読み取り】</strong>本アプリはiPhoneのモーションセンサーで睡眠時間帯を推定します。Apple Watchをご利用の場合、参考としてApple HealthKitから睡眠分析データ（Sleep Analysis）も読み取ります。</p>
+<p><strong>【利用制限】</strong></p>
+<ul><li>本アプリはHealthKitの睡眠データを読み取るのみで、健康データを書き込んだり変更したりしません。</li><li>HealthKitデータを広告やデータ販売に利用することはありません。</li><li>HealthKitデータは端末やiCloud環境から外部に出ることはありません。</li></ul>
+<p><strong>【権限管理】</strong>iOS「設定 → プライバシーとセキュリティ → ヘルスケア → 野猪睡眠」でいつでもアクセスを無効化できます。</p></section>
+<section><h2>7. ユーザーの権利</h2><p><strong>【閲覧・訂正】</strong>本アプリ内でいつでも睡眠記録・評価・コメントを確認できます。</p>
+<p><strong>【削除権】</strong>データの削除を要求する権利があります。データはローカル保存のため、以下の方法で削除できます：</p>
+<ul><li>アプリを削除（全ローカルデータ消去）</li><li>設定でiCloud同期をオフ</li></ul></section>
+<section><h2>8. 子どものプライバシー</h2><p>本アプリは13歳未満の子どもを対象としていません。13歳未満の子どもの個人情報を意図的に収集することはありません。万一収集した場合は、直ちにご連絡いただければ削除します。</p></section>
+<section><h2>9. 第三者サービス</h2><p>本アプリは以下の第三者サービスを利用します：</p>
+<ul><li>HealthKit（Apple Inc.）— Apple Watch睡眠データの読み取り</li><li>iCloud（Apple Inc.）— 端末間データ同期</li></ul>
+<p>これらのサービスのプライバシーはAppleが管理します。Appleのプライバシーポリシーをご参照ください。</p></section>
+<section><h2>10. ポリシーの変更</h2><p>当社はいつでも本プライバシーポリシーを変更する権利を留保します。変更後は本アプリ内で公表され、公表日から効力を生じます。重大な変更はアプリ内通知でお知らせします。</p></section>
+<section><h2>11. お問い合わせ</h2><p>本プライバシーポリシーに関するご質問・ご提案・苦情は、以下の方法でお問い合わせください：</p>
+<ul><li>メール：13039475@qq.com</li></ul>
+<p>野猪睡眠チーム</p></section>
+    </div>
+    <div class="panel lang-ko">
+<section><h2>1. 서문</h2><p>野猪睡眠(이하 &#x27;본 앱&#x27;)은 사용자 개인정보 보호를 중요하게 생각합니다. 본 개인정보 처리방침은 개인정보를 어떻게 수집·이용·저장·보호하는지 설명합니다.</p>
+<p>이용 전에 본 방침을 주의 깊게 읽어 주세요. 동의하지 않으면 이용을 중단해 주세요.</p></section>
+<section><h2>2. 수집하는 정보</h2><p><strong>【이용자가 제공하는 정보】</strong></p>
+<ul><li>닉네임: 자발적으로 설정하며 앱 내에서 표시됩니다.</li></ul>
+<p><strong>【자동 수집 정보】</strong></p>
+<ul><li>수면 데이터: 취침 시간·기상 시간·수면 시간(Apple Watch/HealthKit 또는 iPhone 센서로 자동 수집)</li></ul>
+<p><strong>【수집하지 않는 정보】</strong></p>
+<ul><li>실명, 주민등록번호, 전화번호, 주소</li><li>정확한 위치 정보</li><li>연락처, 사진, 메시지</li><li>Apple ID 비밀번호나 결제 정보</li><li>마이크 녹음 내용(본 앱은 마이크 권한을 요청하지 않음)</li><li>기기 모델, iOS 버전, 사용 통계(본 앱은 수집하지 않음)</li></ul></section>
+<section><h2>3. 정보의 이용</h2><p>당사는 정보를 다음 목적으로만 이용합니다:</p>
+<ul><li>수면 데이터: 수면 등급·AI 평가·월간 통계 생성</li><li>닉네임: 프로필 표시</li></ul>
+<p>광고 푸시나 상업적 마케팅 목적으로 개인정보를 이용하지 않습니다.</p></section>
+<section><h2>4. 정보의 저장과 보호</h2><p><strong>【저장 방식】</strong></p>
+<ul><li>로컬 저장: 모든 수면 데이터와 등급 기록은 iPhone 기기 내에 저장됩니다.</li><li>iCloud 동기화: 활성화하면 앱에서 생성한 수면 요약, 댓글, 프로필이 Apple iCloud를 통해 암호화 동기화되어 여러 기기에서 접근할 수 있습니다(건강 앱의 원시 건강 데이터는 포함되지 않습니다).</li></ul>
+<p><strong>【데이터 보안】</strong></p>
+<ul><li>당사는 백엔드 서버를 운영하지 않으며, 데이터가 당사 서버로 업로드되지 않습니다.</li><li>iCloud 동기화는 Apple이 제공하며 Apple의 개인정보·보안 기준을 따릅니다.</li><li>업계 표준의 보안 조치를 적용하지만 절대적인 안전을 보장할 수는 없습니다.</li></ul>
+<p><strong>【데이터 보존】</strong>데이터는 다음 시점까지 기기에 유지됩니다:</p>
+<ul><li>앱을 수동 삭제(로컬 데이터 삭제)</li><li>iOS 설정에서 iCloud 동기화 끄기</li></ul></section>
+<section><h2>5. 정보의 공유</h2><p>당사는 제3자에게 개인정보를 판매·임대·공유하지 않습니다.</p>
+<p>다음 경우에만 정보를 공개할 수 있습니다:</p>
+<ul><li>법령 또는 정부 기관의 정당한 요구</li><li>당사의 정당한 권리나 사용자 안전 보호에 필요한 경우</li><li>Apple이 기술 서비스 제공자로서 iCloud 동기화를 제공하는 경우(데이터는 Apple이 처리)</li></ul></section>
+<section><h2>6. HealthKit 데이터 안내</h2><p><strong>【데이터 읽기】</strong>본 앱은 iPhone의 모션 센서로 수면 시간대를 추정합니다. Apple Watch를 사용하면 참고용으로 Apple HealthKit에서 수면 분석 데이터(Sleep Analysis)도 읽습니다.</p>
+<p><strong>【사용 제한】</strong></p>
+<ul><li>본 앱은 HealthKit의 수면 데이터만 읽으며 건강 데이터를 쓰거나 수정하지 않습니다.</li><li>HealthKit 데이터를 광고나 데이터 판매에 사용하지 않습니다.</li><li>HealthKit 데이터는 기기나 iCloud 환경 밖으로 나가지 않습니다.</li></ul>
+<p><strong>【권한 관리】</strong>iOS &#x27;설정 → 개인정보 보호 및 보안 → 건강 → 野猪睡眠&#x27;에서 언제든 접근을 차단할 수 있습니다.</p></section>
+<section><h2>7. 이용자의 권리</h2><p><strong>【열람·정정】</strong>본 앱에서 언제든 수면 기록·등급·댓글을 확인할 수 있습니다.</p>
+<p><strong>【삭제권】</strong>데이터 삭제를 요구할 권리가 있습니다. 데이터는 로컬 저장이므로 다음 방법으로 삭제할 수 있습니다:</p>
+<ul><li>앱 삭제(로컬 데이터 모두 삭제)</li><li>설정에서 iCloud 동기화 끄기</li></ul></section>
+<section><h2>8. 아동 프라이버시</h2><p>본 앱은 13세 미만 아동을 대상으로 하지 않습니다. 13세 미만 아동의 개인정보를 의도적으로 수집하지 않습니다. 수집된 사실을 발견하면 즉시 연락 주시면 삭제하겠습니다.</p></section>
+<section><h2>9. 제3자 서비스</h2><p>본 앱은 다음 제3자 서비스를 사용합니다:</p>
+<ul><li>HealthKit(Apple Inc.) — Apple Watch 수면 데이터 읽기</li><li>iCloud(Apple Inc.) — 기기 간 데이터 동기화</li></ul>
+<p>위 서비스의 개인정보 보호는 Apple이 담당합니다. Apple의 개인정보 처리방침을 참조해 주세요.</p></section>
+<section><h2>10. 방침 변경</h2><p>당사는 언제든 본 개인정보 처리방침을 변경할 권리를 보유합니다. 변경된 방침은 본 앱 내에 공지되며 공지일부터 효력이 발생합니다. 중대한 변경은 앱 내 알림으로 안내합니다.</p></section>
+<section><h2>11. 문의처</h2><p>본 개인정보 처리방침에 대한 문의·제안·불만은 다음 방법으로 연락해 주세요:</p>
+<ul><li>이메일: 13039475@qq.com</li></ul>
+<p>野猪睡眠 팀</p></section>
     </div>
     <div class="links">
       <a href="index.html">首页 Home</a>
