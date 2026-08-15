@@ -20,10 +20,12 @@
   main .panel { display: none; }
   #lang-en:checked ~ .wrap main .lang-en,
   #lang-zh:checked ~ .wrap main .lang-zh,
+  #lang-zhHant:checked ~ .wrap main .lang-zhHant,
   #lang-ja:checked ~ .wrap main .lang-ja,
   #lang-ko:checked ~ .wrap main .lang-ko { display: block; }
   #lang-en:checked ~ .wrap main .tabs label[for="lang-en"],
   #lang-zh:checked ~ .wrap main .tabs label[for="lang-zh"],
+  #lang-zhHant:checked ~ .wrap main .tabs label[for="lang-zhHant"],
   #lang-ja:checked ~ .wrap main .tabs label[for="lang-ja"],
   #lang-ko:checked ~ .wrap main .tabs label[for="lang-ko"] { background: #1a73e8; color: #fff; border-color: #1a73e8; }
   main .panel { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 20px 22px; margin-top: 12px; }
@@ -36,6 +38,7 @@
 <body>
 <input type="radio" name="lang" id="lang-en" class="lang-radio" checked>
 <input type="radio" name="lang" id="lang-zh" class="lang-radio">
+<input type="radio" name="lang" id="lang-zhHant" class="lang-radio">
 <input type="radio" name="lang" id="lang-ja" class="lang-radio">
 <input type="radio" name="lang" id="lang-ko" class="lang-radio">
 <div class="wrap">
@@ -44,6 +47,7 @@
     <div class="tabs">
       <label for="lang-en">English</label>
       <label for="lang-zh">中文</label>
+      <label for="lang-zhHant">繁體中文</label>
       <label for="lang-ja">日本語</label>
       <label for="lang-ko">한국어</label>
     </div>
@@ -74,6 +78,20 @@
       打开 App 内「会员订阅」页面，点击「恢复购买」即可找回已购会员。</p>
       <h2>联系我们</h2>
       <p>如遇其他问题，请发送邮件至：<a href="mailto:13039475@qq.com">13039475@qq.com</a></p>
+    </div>
+
+    <div class="panel lang-zhHant">
+      <h2>常見問題</h2>
+      <p><strong>Q：為什麼沒有睡眠資料？</strong><br>
+      請確認已在「健康」中允許讀取睡眠資料，並保證入睡期間 iPhone 或 Apple Watch 處於正常使用狀態。首次使用需睡一晚後才會產生資料。</p>
+      <p><strong>Q：資料保存在哪裡？</strong><br>
+      所有資料僅保存在您的裝置本機，iCloud 同步由 Apple 加密處理，我們不會上傳或存取您的資料。</p>
+      <p><strong>Q：如何取消訂閱？</strong><br>
+      在 iOS「設定 → Apple ID → 訂閱」中管理或取消自動續費訂閱。</p>
+      <p><strong>Q：如何回復購買？</strong><br>
+      開啟 App 內「會員訂閱」頁面，點擊「回復購買」即可找回已購會員。</p>
+      <h2>聯絡我們</h2>
+      <p>如遇其他問題，請寄送郵件至：<a href="mailto:13039475@qq.com">13039475@qq.com</a></p>
     </div>
 
     <div class="panel lang-ja">

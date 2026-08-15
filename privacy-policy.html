@@ -31,10 +31,12 @@
   .lang-radio { position: absolute; opacity: 0; pointer-events: none; }
   main .panel { display: none; }
   #lang-zh:checked ~ .wrap main .lang-zh,
+  #lang-zhHant:checked ~ .wrap main .lang-zhHant,
   #lang-en:checked ~ .wrap main .lang-en,
   #lang-ja:checked ~ .wrap main .lang-ja,
   #lang-ko:checked ~ .wrap main .lang-ko { display: block; }
   #lang-zh:checked ~ .wrap main .tabs label[for="lang-zh"],
+  #lang-zhHant:checked ~ .wrap main .tabs label[for="lang-zhHant"],
   #lang-en:checked ~ .wrap main .tabs label[for="lang-en"],
   #lang-ja:checked ~ .wrap main .tabs label[for="lang-ja"],
   #lang-ko:checked ~ .wrap main .tabs label[for="lang-ko"] {
@@ -62,6 +64,7 @@
 </head>
 <body>
 <input type="radio" name="lang" id="lang-zh" class="lang-radio" checked>
+<input type="radio" name="lang" id="lang-zhHant" class="lang-radio">
 <input type="radio" name="lang" id="lang-en" class="lang-radio">
 <input type="radio" name="lang" id="lang-ja" class="lang-radio">
 <input type="radio" name="lang" id="lang-ko" class="lang-radio">
@@ -74,6 +77,7 @@
   <main>
     <div class="tabs">
       <label for="lang-zh">中文</label>
+<label for="lang-zhHant">繁體中文</label>
 <label for="lang-en">English</label>
 <label for="lang-ja">日本語</label>
 <label for="lang-ko">한국어</label>
@@ -114,6 +118,43 @@
 <section><h2>十一、联系我们</h2><p>如您对本隐私政策有任何疑问、建议或投诉，请通过以下方式联系我们：</p>
 <ul><li>电子邮件：13039475@qq.com</li></ul>
 <p>野猪睡眠团队</p></section>
+    </div>
+    <div class="panel lang-zhHant">
+<section><h2>一、引言</h2><p>野豬睡眠（以下簡稱「本App」）高度重視使用者的隱私保護。本隱私權政策旨在向您說明我們如何蒐集、使用、儲存和保護您的個人資訊。</p>
+<p>請您在使用本App前仔細閱讀本政策。如您不同意本政策的任何內容，請停止使用本App。</p></section>
+<section><h2>二、我們蒐集的資訊</h2><p><strong>【您提供的資訊】</strong></p>
+<ul><li>暱稱：您可自願設定個人暱稱，用於在App內展示。</li></ul>
+<p><strong>【我們自動蒐集的資訊】</strong></p>
+<ul><li>睡眠資料：包括入睡時間、起床時間、睡眠時長，透過 Apple Watch（HealthKit）或 iPhone 感測器自動採集。</li></ul>
+<p><strong>【我們不蒐集的資訊】</strong>我們不會蒐集以下資訊：</p>
+<ul><li>您的真實姓名、身分證字號、電話號碼、住家地址</li><li>您的精確地理位置</li><li>您的通訊錄、照片、簡訊內容</li><li>您的 Apple ID 密碼或付款資訊</li><li>透過麥克風錄製的內容（本App不啟用麥克風權限）</li><li>裝置型號、iOS 版本號或使用統計（本App不採集）</li></ul></section>
+<section><h2>三、資訊的使用</h2><p>我們僅將您的資訊用於以下目的：</p>
+<ul><li>睡眠資料：產生睡眠評級、AI 評價、月度統計</li><li>暱稱：個人中心展示</li></ul>
+<p>我們不會將您的個人資訊用於任何廣告推播或商業行銷目的。</p></section>
+<section><h2>四、資訊的儲存與保護</h2><p><strong>【儲存方式】</strong></p>
+<ul><li>本機儲存：所有睡眠資料、評級記錄均儲存在您的 iPhone 本機裝置中。</li><li>iCloud 同步：如您開啟 iCloud，App 產生的睡眠摘要、留言與個人資料將透過 Apple iCloud 進行加密同步，以便您在多台裝置間存取（不包含健康App中的原始健康資料）。</li></ul>
+<p><strong>【資料安全】</strong></p>
+<ul><li>我們不營運後端伺服器，您的資料不會上傳至我們的伺服器。</li><li>iCloud 同步由 Apple 提供，遵循 Apple 的隱私和安全標準。</li><li>我們採用業界標準的安全措施保護資料，但無法保證絕對安全。</li></ul>
+<p><strong>【資料保留】</strong>您的資料將保留在您的裝置上，直至您：</p>
+<ul><li>手動刪除 App（本機資料將被清除）</li><li>透過 iOS 設定關閉 iCloud 同步</li></ul></section>
+<section><h2>五、資訊的分享</h2><p>我們不會向任何第三方出售、出租或分享您的個人資訊。</p>
+<p>僅在以下情形下，我們可能揭露您的資訊：</p>
+<ul><li>法律法規要求或政府機關的合法要求</li><li>保護我們的合法權益或使用者安全所必需</li><li>Apple 作為技術服務商提供 iCloud 同步服務（資料由 Apple 處理）</li></ul></section>
+<section><h2>六、HealthKit 資料說明</h2><p><strong>【資料讀取】</strong>本App透過 iPhone 動作感測器推斷睡眠時段；如您使用 Apple Watch，也將透過 Apple HealthKit 讀取睡眠分析資料（Sleep Analysis）作為參考。</p>
+<p><strong>【資料使用限制】</strong></p>
+<ul><li>本App僅讀取 HealthKit 中的睡眠資料，不會寫入或修改您的健康資料。</li><li>我們不會將 HealthKit 資料用於廣告或資料銷售。</li><li>HealthKit 資料不會離開您的裝置或 iCloud 環境。</li></ul>
+<p><strong>【權限管理】</strong>您可隨時在 iOS「設定 → 隱私權與安全性 → 健康 → 野豬睡眠」中關閉 HealthKit 資料存取權限。</p></section>
+<section><h2>七、您的權利</h2><p><strong>【存取與更正】</strong>您可以在本App內隨時查看您的睡眠記錄、評級和留言內容。</p>
+<p><strong>【刪除權】</strong>您有權要求我們刪除您的資料。由於資料儲存在本機，您可透過以下方式刪除：</p>
+<ul><li>刪除本App（清除所有本機資料）</li><li>在設定中關閉 iCloud 同步</li></ul></section>
+<section><h2>八、兒童隱私</h2><p>本App不面向 13 歲以下兒童。我們不會故意蒐集 13 歲以下兒童的個人資訊。如您發現我們蒐集了此類資訊，請立即聯絡我們刪除。</p></section>
+<section><h2>九、第三方服務</h2><p>本App使用以下第三方服務：</p>
+<ul><li>HealthKit（Apple Inc.）— 讀取 Apple Watch 睡眠資料</li><li>iCloud（Apple Inc.）— 資料跨裝置同步</li></ul>
+<p>上述服務的隱私保護由 Apple 負責，請參閱 Apple 的隱私政策。</p></section>
+<section><h2>十、隱私權政策的變更</h2><p>我們保留隨時修改本隱私權政策的權利。修改後的政策將在本App內公布，自公布之日起生效。重大變更將透過 App 內通知告知您。</p></section>
+<section><h2>十一、聯絡我們</h2><p>如您對本隱私權政策有任何疑問、建議或申訴，請透過以下方式聯絡我們：</p>
+<ul><li>電子郵件：13039475@qq.com</li></ul>
+<p>野豬睡眠團隊</p></section>
     </div>
     <div class="panel lang-en">
 <section><h2>1. Introduction</h2><p>AnimalSleep (the &quot;App&quot;) takes user privacy seriously. This Privacy Policy explains how we collect, use, store and protect your personal information.</p>

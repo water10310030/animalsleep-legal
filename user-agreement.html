@@ -31,10 +31,12 @@
   .lang-radio { position: absolute; opacity: 0; pointer-events: none; }
   main .panel { display: none; }
   #lang-zh:checked ~ .wrap main .lang-zh,
+  #lang-zhHant:checked ~ .wrap main .lang-zhHant,
   #lang-en:checked ~ .wrap main .lang-en,
   #lang-ja:checked ~ .wrap main .lang-ja,
   #lang-ko:checked ~ .wrap main .lang-ko { display: block; }
   #lang-zh:checked ~ .wrap main .tabs label[for="lang-zh"],
+  #lang-zhHant:checked ~ .wrap main .tabs label[for="lang-zhHant"],
   #lang-en:checked ~ .wrap main .tabs label[for="lang-en"],
   #lang-ja:checked ~ .wrap main .tabs label[for="lang-ja"],
   #lang-ko:checked ~ .wrap main .tabs label[for="lang-ko"] {
@@ -62,6 +64,7 @@
 </head>
 <body>
 <input type="radio" name="lang" id="lang-zh" class="lang-radio" checked>
+<input type="radio" name="lang" id="lang-zhHant" class="lang-radio">
 <input type="radio" name="lang" id="lang-en" class="lang-radio">
 <input type="radio" name="lang" id="lang-ja" class="lang-radio">
 <input type="radio" name="lang" id="lang-ko" class="lang-radio">
@@ -74,6 +77,7 @@
   <main>
     <div class="tabs">
       <label for="lang-zh">中文</label>
+<label for="lang-zhHant">繁體中文</label>
 <label for="lang-en">English</label>
 <label for="lang-ja">日本語</label>
 <label for="lang-ko">한국어</label>
@@ -100,6 +104,29 @@
 <section><h2>十、联系我们</h2><p>如您对本协议有任何疑问，请通过以下方式联系我们：</p>
 <ul><li>电子邮件：13039475@qq.com</li></ul>
 <p>野猪睡眠团队</p></section>
+    </div>
+    <div class="panel lang-zhHant">
+<section><h2>一、條款接受</h2><p>歡迎使用野豬睡眠（以下簡稱「本App」）。本App由野豬睡眠團隊（以下簡稱「我們」）開發營運。請您在使用本App前仔細閱讀本使用者條款（以下簡稱「本條款」）。</p>
+<p>您下載、安裝或使用本App，即視為您已閱讀並同意接受本條款的約束。如果您不同意本條款的任何內容，請立即停止使用本App。</p></section>
+<section><h2>二、服務說明</h2><p><strong>【服務內容】</strong>野豬睡眠是一款協助使用者以月為單位統計睡眠品質的 iOS 應用程式，核心功能包括：</p>
+<ul><li>透過 Apple Watch 或 iPhone 自動監測睡眠時段</li><li>依據睡眠時長產生動物評級（獅子、狗狗、野豬、貓頭鷹）</li><li>提供端側 AI 睡眠評價與建議</li><li>展示月度睡眠統計與日曆記錄</li></ul>
+<p><strong>【服務變更】</strong>我們保留隨時修改、中斷或終止本App全部或部分服務的權利，無需事先通知。我們不對因服務變更給您造成的任何損失承擔責任。</p></section>
+<section><h2>三、無需註冊登入</h2><p><strong>【無需登入】</strong>本App無需註冊或登入即可使用全部功能，您無需提供任何個人資訊即可開始記錄睡眠資料。</p>
+<p><strong>【資料歸屬】</strong>本App不建立任何帳號，您的睡眠資料僅儲存在您的裝置上。</p></section>
+<section><h2>四、使用者行為規範</h2><p><strong>【禁止行為】</strong>您在使用本App時，不得從事以下行為：</p>
+<ul><li>以任何方式干擾或破壞本App的正常運作</li><li>未經授權存取、修改或刪除本App的原始碼或資料</li><li>將本App用於任何違法或侵權目的</li><li>反向工程、反編譯或試圖擷取本App的核心演算法</li></ul>
+<p><strong>【裝置使用】</strong>本App的睡眠監測功能依賴您的裝置感測器（如 Apple Watch、iPhone 加速度計）。監測結果的準確性受裝置放置位置、使用習慣等因素影響，本App提供的睡眠資料僅供參考，不構成醫療建議或診斷。</p></section>
+<section><h2>五、智慧財產權</h2><p><strong>【權利歸屬】</strong>本App的所有內容，包括但不限於程式碼、介面設計、圖示、文字、演算法及 AI 評價範本，均受著作權法、商標法及其他智慧財產權法律法規保護。未經我們書面許可，您不得複製、修改、傳播或用於商業目的。</p>
+<p><strong>【使用者內容】</strong>您在本App中輸入的留言、備註等內容，其智慧財產權歸您所有。您授權我們在本App範圍內使用、儲存和展示該內容的權利。</p></section>
+<section><h2>六、免責聲明</h2><p><strong>【健康免責聲明】</strong>本App不是醫療器材，不提供醫療診斷、治療建議或專業健康諮詢。本App產生的睡眠評級、AI 評價及統計資料僅供個人參考，不能替代醫生或專業醫療機構的建議。如果您有嚴重的睡眠障礙或健康問題，請及時諮詢專業醫療人員。</p>
+<p><strong>【資料準確性】</strong>本App透過裝置感測器推斷睡眠資料，可能存在誤差。我們不對資料的絕對準確性作出保證。您理解並同意，基於本App資料做出的任何決定，其風險由您自行承擔。</p>
+<p><strong>【服務中斷】</strong>因網路故障、裝置問題、系統維護或不可抗力導致的服務中斷，我們不承擔責任。</p></section>
+<section><h2>七、隱私保護</h2><p>我們高度重視您的隱私。關於我們如何蒐集、使用和保護您的個人資訊，請參閱《野豬睡眠隱私權政策》。</p></section>
+<section><h2>八、條款修改</h2><p>我們保留隨時修改本條款的權利。修改後的條款將在本App內公布，自公布之日起生效。您繼續使用本App，視為接受修改後的條款。</p></section>
+<section><h2>九、適用法律與爭議解決</h2><p>本條款的訂立、執行和解釋均適用中華人民共和國法律（不含港澳臺地區）。因本條款引起的或與本條款有關的任何爭議，雙方應友好協商解決；協商不成的，任何一方均可向被告所在地有管轄權的人民法院提起訴訟。</p></section>
+<section><h2>十、聯絡我們</h2><p>如您對本條款有任何疑問，請透過以下方式聯絡我們：</p>
+<ul><li>電子郵件：13039475@qq.com</li></ul>
+<p>野豬睡眠團隊</p></section>
     </div>
     <div class="panel lang-en">
 <section><h2>1. Acceptance of Terms</h2><p>Welcome to AnimalSleep (the &quot;App&quot;), developed and operated by the AnimalSleep team (&quot;we&quot;). Please read this User Agreement (the &quot;Agreement&quot;) carefully before using the App.</p>
