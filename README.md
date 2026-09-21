@@ -1,7 +1,7 @@
-# 野猪睡眠 AnimalSleep — 法律文件托管（GitHub Pages）
+# Zzzoo — 法律文件托管（GitHub Pages）
 
 本仓库用于托管 App Store 审核所需的《用户协议》与《隐私政策》。
-页面为静态 HTML，支持中文、English、日本語、한국어 四种语言（页面右上角可切换）。
+页面为静态 HTML，支持中文、繁體中文、English、日本語、한국어 五种语言（页面右上角可切换）。
 
 ## 文件
 
@@ -13,7 +13,7 @@
 ## 部署步骤
 
 1. 在 GitHub 新建公开仓库，例如 `animalsleep-legal`。
-2. 把以上三个文件上传到仓库根目录。
+2. 把以上四个文件（含 index.html）上传到仓库根目录。
 3. 打开仓库 Settings → Pages。
 4. Build and deployment 选择 “Deploy from a branch”，分支选 `main`，目录选 `/ (root)`，点 Save。
 5. 等待 1–2 分钟，访问：
