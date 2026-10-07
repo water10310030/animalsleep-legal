@@ -1,4 +1,4 @@
-# Zzzoo — 法律文件托管（GitHub Pages）
+# 野猪睡眠 / AnimalSleep — 法律文件托管（GitHub Pages）
 
 本仓库用于托管 App Store 审核所需的《用户协议》与《隐私政策》。
 页面为静态 HTML，支持中文、繁體中文、English、日本語、한국어 五种语言（页面右上角可切换）。
